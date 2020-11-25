@@ -45,7 +45,7 @@ export default class Home extends Component {
         <div style={{textAlign:"center"}}>
                 <h1 style={{color:"white",marginTop:"10%",fontSize:"5rem"}}>Smart City Jaipur</h1>
                 <Form style={{textAlign:"center"}}>
-                    <FormControl type="text" placeholder="Your Area" style={{width:"40rem",marginTop:"2rem",marginBottom:"2rem",marginLeft:"29%"}} />
+                    <FormControl type="text" placeholder="Your Area" style={{width:"40%",marginTop:"2rem",marginBottom:"2rem",marginLeft:"29%"}} />
                     <Button variant="success">Go!</Button>
                 </Form>
           </div>
