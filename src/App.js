@@ -9,6 +9,7 @@ import Water from "./components/Water";
 import Garbage from "./components/Garbage";
 import Gas from "./components/Gas";
 import history from './history.js';
+import Info from './components/Info'
 function App() {
   return (
     <div className="App">
@@ -38,6 +39,7 @@ function App() {
               <Route exact path="/water" component={Water} />
               <Route exact path="/garbage" component={Garbage} />
               <Route exact path="/gas" component={Gas} />
+              <Route exact path="/info/:area" component={Info}/>
             </Switch>
       </div>
       </Router>
