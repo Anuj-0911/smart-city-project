@@ -1,27 +1,14 @@
 import React, { Component } from "react";
 import {Navbar,Nav,NavDropdown,Button,Form,FormControl} from 'react-bootstrap';
 import back from '../videos/city life.mp4';
-export default class Home extends Component {
 
-  constructor(props){
-    super(props);
-    this.state={
-      items: [],
-    }
-  }
-  
-  componentDidMount()
-  {
-    fetch('https://smart-city-project-155f4.firebaseio.com/jaipur.json').then(res => res.json())
-    .then(json=>{
-        this.setState({
-            items : json.data,
-        })
-    });
-  
-  }
+function Routetoarea()
+{
+  const dat=document.getElementById('area1').value;
+  window.location.href='/info/'+String(dat);  
+}
 
-  render() {
+export default function Home() {
     return (
       <div>
         <video
@@ -45,11 +32,11 @@ export default class Home extends Component {
         <div style={{textAlign:"center"}}>
                 <h1 style={{color:"white",marginTop:"10%",fontSize:"5rem"}}>Smart City Jaipur</h1>
                 <Form style={{textAlign:"center"}}>
-                    <FormControl type="text" placeholder="Your Area" style={{width:"40%",marginTop:"2rem",marginBottom:"2rem",marginLeft:"29%"}} />
-                    <Button variant="success">Go!</Button>
+                    <FormControl type="text" id="area1" placeholder="Your Area" required style={{width:"40%",marginTop:"2rem",marginBottom:"2rem",marginLeft:"29%"}} />
+                    <Button variant="success" onClick={ Routetoarea }
+                      >Go!</Button>
                 </Form>
           </div>
       </div>
     );
-  }
 }
