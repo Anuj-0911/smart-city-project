@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Router, Switch, Route } from "react-router-dom";
@@ -9,8 +10,15 @@ import Water from "./components/Water";
 import Garbage from "./components/Garbage";
 import Gas from "./components/Gas";
 import history from './history.js';
-import Info from './components/Info'
+import Info from './components/Info';
+import SplashScreen from "./components/SplashScreen";
 function App() {
+  const [splash, setSplash] = useState(true);
+  setTimeout(() => {
+    setSplash(false);
+  }, 2000);
+
+  if (splash) return <SplashScreen />;
   return (
     <div className="App">
       <Router history={history}>
