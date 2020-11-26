@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.category-card {
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  background-color: #121B20;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.category-card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.category-card:hover {
+  transform: translateY(-40px);
+  transition: 0.4s ease-out;
+}
+
+.category-card:hover~.category-card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+@media (max-width:800px) {
+  .category-card {
+      display: flex;
+      height: 50vh;
+      width: 100%;
+      background-color: #121B20;
+      border-radius: 10px;
+      box-shadow: -1rem 0 3rem #000;
+      /*   margin-left: -50px; */
+      transition: 0.4s ease-out;
+      position: relative;
+  }
+  .category-card:not(:first-child) {
+      margin-top: -200px;
+      margin-left: 0px;
+  }
+  .category-card:hover~.category-card {
+      position: relative;
+      left: 0px;
+      /* top: -120px; */
+      transition: 0.4s ease-out;
+  }
+
+  .category-card:hover 
+  {
+      transform: translateY(-100px);
+      transition: 0.4s ease-out;
+  
+  }
+  }
