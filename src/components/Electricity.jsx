@@ -151,8 +151,8 @@ const Electricity=(props)=>{
 
      return(
         <div>
-            <h1>Electricity in jaipur</h1>
-            <h2>Today's Status</h2>
+            <h1>Today's Electricity Status</h1>
+            {/* <h2>Today's Status</h2> */}
             <Container style={{marginTop:"6rem"}}>
                 <Row>
                     <Col sm={12} xl={4} md={4}>
