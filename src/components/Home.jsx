@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import {Navbar,Nav,NavDropdown,Button,Form,FormControl} from 'react-bootstrap';
 import back from '../videos/city life.mp4';
-export default class Home extends Component {
+import history from '../history.js';
+import axios from 'axios';
+import { withRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
+
+class Home extends Component {
 
   constructor(props){
     super(props);
@@ -46,10 +51,11 @@ export default class Home extends Component {
                 <h1 style={{color:"white",marginTop:"10%",fontSize:"5rem"}}>Smart City Jaipur</h1>
                 <Form style={{textAlign:"center"}}>
                     <FormControl type="text" placeholder="Your Area" style={{width:"40%",marginTop:"2rem",marginBottom:"2rem",marginLeft:"29%"}} />
-                    <Button variant="success">Go!</Button>
+                    <Button variant="success" onClick={ ()=> {window.location.href='/info'} } >Go!</Button>
                 </Form>
           </div>
       </div>
     );
   }
 }
+export default withRouter(Home);
