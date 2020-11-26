@@ -16,7 +16,6 @@ code {
   display: flex;
   height: 40vh;
   width: 100%;
-  background-color: #121B20;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #000;
   /*   margin-left: -50px; */
@@ -45,7 +44,7 @@ code {
       display: flex;
       height: 50vh;
       width: 100%;
-      background-color: #121B20;
+
       border-radius: 10px;
       box-shadow: -1rem 0 3rem #000;
       /*   margin-left: -50px; */
