@@ -151,7 +151,7 @@ const Gas=(props)=>{
 
      return(
         <div>
-            <h1>Electricity in jaipur</h1>
+            <h1>Gas in jaipur</h1>
             <h2>Today's Status</h2>
             <Container style={{marginTop:"6rem"}}>
                 <Row>

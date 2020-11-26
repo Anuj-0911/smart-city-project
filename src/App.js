@@ -12,6 +12,7 @@ import Gas from "./components/Gas";
 import history from './history.js';
 import Info from './components/Info';
 import SplashScreen from "./components/SplashScreen";
+import Notifyme from './components/Notifyme';
 function App() {
   const [splash, setSplash] = useState(true);
   setTimeout(() => {
@@ -37,6 +38,7 @@ function App() {
               <NavDropdown.Item href="/about">About</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <Nav.Link href="/notify" style={{color:"black"}}>Notify Me</Nav.Link>
         </Navbar.Collapse>
       </Navbar>
       <div>
@@ -47,6 +49,7 @@ function App() {
               <Route exact path="/water" component={Water} />
               <Route exact path="/garbage" component={Garbage} />
               <Route exact path="/gas" component={Gas} />
+              <Route exact path="/notify" component={Notifyme} />
               <Route exact path="/info/:area" component={Info}/>
             </Switch>
       </div>
