@@ -4,9 +4,9 @@ import { Container,Row,Col,Card } from "react-bootstrap";
 
 const Info=(props)=>{
     const area = props.match.params.area;
-    const [data1, setData1] = useState("");
-    const [data2, setData2] = useState("");
-    const [data3, setData3] = useState("");
+    const [data1, setData1] = useState("Adequate gas supply");
+    const [data2, setData2] = useState("There will be no power cut in your area today :)");
+    const [data3, setData3] = useState("Water is available 24*7");
     console.log(area);
     useEffect(()=>{
         const config = {
